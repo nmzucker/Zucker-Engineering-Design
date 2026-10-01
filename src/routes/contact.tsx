@@ -6,7 +6,7 @@ import { z } from "zod";
 import { Check, Mail, MapPin, Phone } from "lucide-react";
 
 import { Reveal, Rule } from "@/components/Reveal";
-import { capabilities, firm } from "@/lib/site";
+import { firm, needs } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const schema = z.object({
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to a water resources engineer about flood risk, drainage, stream restoration, or water supply work. Offices in Denver and Boise.",
+          "Talk to a water resources engineer about flood risk, drainage, stream restoration, or water supply work. Based in Denver, Colorado.",
       },
       { property: "og:title", content: "Contact Zucker Engineering & Design" },
       {
@@ -162,9 +162,9 @@ function ContactPage() {
                     </label>
                     <select id="need" {...register("need")} className={cn(inputClass, "appearance-none")}>
                       <option value="">Select the closest match…</option>
-                      {capabilities.map((item) => (
-                        <option key={item.slug} value={item.title}>
-                          {item.title}
+                      {needs.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
                         </option>
                       ))}
                       <option value="Something else">Something else</option>

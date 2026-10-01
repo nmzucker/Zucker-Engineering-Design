@@ -11,45 +11,18 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "A water resources engineering firm founded in 2009, now 48 engineers and scientists across Denver and Boise, licensed in seven western states.",
+          "Zucker Engineering & Design is a single-principal water resources engineering practice founded in 2009, licensed in seven western states and working across the Mountain West.",
       },
       { property: "og:title", content: "About Zucker Engineering & Design" },
       {
         property: "og:description",
         content:
-          "Senior-led water resources engineering teams that stay on the project through construction.",
+          "One licensed engineer from the first site walk through construction closeout — no handoffs, no layers.",
       },
     ],
   }),
   component: AboutPage,
 });
-
-const leadership = [
-  {
-    name: "Maya Zucker, PE",
-    role: "Founder & Principal",
-    focus: "Floodplain management, levee and floodwall design, CLOMR/DLOMR strategy",
-    bio: "Twenty-two years in river engineering, including a decade with a federal agency before starting the firm.",
-  },
-  {
-    name: "Daniel Okafor, PE, BCEE",
-    role: "Principal, Water Supply",
-    focus: "Intake, transmission, pump station and treatment facilities planning",
-    bio: "Leads the water supply practice and has taken four facilities from concept through startup.",
-  },
-  {
-    name: "Rhea Sandoval, PE",
-    role: "Practice Lead, Drainage & Stormwater",
-    focus: "Drainage master planning, MS4 programs, detention and water quality design",
-    bio: "Specializes in frameworks that let a jurisdiction model a service area once and reuse it.",
-  },
-  {
-    name: "Tom Brantley, PE",
-    role: "Practice Lead, Streams & Habitat",
-    focus: "Geomorphology, grade control, bioengineering, Corps permitting",
-    bio: "Runs the field program and the instrest flow lab; has restored or stabilized over 20 miles of channel.",
-  },
-];
 
 const affiliations = [
   "American Society of Civil Engineers (ASCE)",
@@ -67,7 +40,7 @@ function AboutPage() {
       <Story />
       <Values />
       <Differentiators />
-      <Leadership />
+      <Principal />
       <Affiliations />
     </>
   );
@@ -82,15 +55,15 @@ function PageHeader() {
         </Reveal>
         <Reveal delay={80}>
           <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.02]">
-            Small firm, senior people, and a long memory for every basin we work in
+            One principal, a long memory for every basin, and no layers in between
           </h1>
         </Reveal>
         <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            {firm.name} was founded in {firm.founded} and has grown to {firm.teamSize} engineers,
-            surveyors, and scientists working out of Denver and Boise. We are licensed in{" "}
-            {firm.licensedIn.length} states and we keep our project lists short enough that a
-            principal is actually on them.
+            {firm.name} was founded in {firm.founded} and has stayed deliberately small. One
+            licensed engineer carries each project from the site walk through construction
+            closeout, supported by a bench of trusted surveyors, hydrologists, and civil
+            designers. Licensed in {firm.licensedIn.length} states.
           </p>
         </Reveal>
       </div>
@@ -109,13 +82,13 @@ function Story() {
           <Reveal delay={80}>
             <p className="mt-6 font-display text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.25]">
               The firm started with a floodplain mapping contract, a borrowed truck, and a
-              conviction that the smaller firms were better at this work than they were being given
+              conviction that the smaller shops were better at this work than they were being given
               credit for.
             </p>
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Seventeen years later the conviction hasn't changed. Water resources work is
+              Seventeen years later that conviction hasn't changed. Water resources work is
               site-specific, relationship-heavy, and unforgiving of guesswork. The firms that do it
               well are usually the ones where the person who ran the model is the person standing on
               the bank when the structure is built.
@@ -123,14 +96,14 @@ function Story() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              So we structured the firm around that. Project teams are small and senior, the model
-              and the assumptions travel with the deliverable, and nobody is promoted out of the
-              field.
+              So the practice is structured around that. The project list stays short enough that a
+              principal is actually on it, the model and the assumptions travel with the
+              deliverable, and nobody is promoted out of the field.
             </p>
           </Reveal>
           <Rule className="mt-12" />
           <Reveal delay={240}>
-            <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
               {firm.stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="font-display text-3xl">{stat.value}</p>
@@ -144,7 +117,7 @@ function Story() {
           <div className="plate aspect-[4/5] w-full lg:sticky lg:top-28">
             <img
               src={aboutField}
-              alt="Two engineers in hard hats reviewing plans on a stone riprap riverbank with a survey tripod"
+              alt="Engineer in a hard hat reviewing plans on a stone riprap riverbank with a survey tripod"
               loading="lazy"
               width={1408}
               height={912}
@@ -166,7 +139,7 @@ function Values() {
         </Reveal>
         <Reveal delay={80}>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06]">
-            Four rules we actually hold each other to
+            Four rules the practice is built on
           </h2>
         </Reveal>
         <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -192,7 +165,7 @@ function Differentiators() {
         <Reveal>
           <p className="eyebrow text-muted-foreground">Why clients stay</p>
           <h2 className="mt-5 font-display text-[clamp(1.9rem,3.6vw,2.8rem)] leading-[1.06]">
-            Three things we do differently on purpose
+            Three things a small practice does better
           </h2>
         </Reveal>
         <div className="flex flex-col">
@@ -210,48 +183,66 @@ function Differentiators() {
   );
 }
 
-function Leadership() {
+function Principal() {
   return (
     <section className="contour-grid relative overflow-hidden bg-deep text-deep-foreground">
       <div className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-32">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
             <Reveal>
-              <p className="eyebrow text-river">Leadership</p>
+              <p className="eyebrow text-river">The principal</p>
             </Reveal>
             <Reveal delay={80}>
-              <h2 className="mt-4 max-w-xl font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06] text-deep-foreground">
-                The people who will be in the room
+              <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06] text-deep-foreground">
+                {firm.principal.name}
               </h2>
             </Reveal>
-          </div>
-          <Reveal delay={140}>
-            <p className="max-w-sm text-sm leading-relaxed text-deep-muted">
-              Every engagement has a named principal of record. You will know theirs before the
-              proposal is signed.
-            </p>
-          </Reveal>
-        </div>
-
-        <div className="mt-14 grid gap-px bg-deep-border sm:grid-cols-2">
-          {leadership.map((person, index) => (
-            <Reveal key={person.name} delay={index * 80}>
-              <div className="h-full bg-deep p-8">
-                <div className="flex items-baseline justify-between gap-4">
-                  <h3 className="font-display text-2xl text-deep-foreground">{person.name}</h3>
-                  <span className="eyebrow shrink-0 text-river">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <p className="mt-2 text-sm text-deep-foreground">{person.role}</p>
-                <p className="mt-5 text-sm leading-relaxed text-deep-muted">{person.bio}</p>
-                <p className="mt-5 border-t border-deep-border pt-4 text-sm text-deep-muted">
-                  <span className="eyebrow mr-2 text-river">Focus</span>
-                  {person.focus}
-                </p>
+            <Reveal delay={140}>
+              <p className="mt-3 text-sm text-deep-foreground">{firm.principal.role}</p>
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="mt-7 max-w-md text-base leading-relaxed text-deep-muted">
+                {firm.principal.bio}
+              </p>
+            </Reveal>
+            <Reveal delay={260}>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <a
+                  href={`mailto:${firm.email}`}
+                  className="eyebrow bg-primary px-6 py-4 text-primary-foreground transition-colors hover:bg-river hover:text-deep"
+                >
+                  Email the principal
+                </a>
+                <a
+                  href={`tel:${firm.phone.replace(/[^\d+]/g, "")}`}
+                  className="eyebrow border border-deep-foreground/35 px-6 py-4 text-deep-foreground transition-colors hover:border-deep-foreground hover:bg-deep-foreground hover:text-deep"
+                >
+                  {firm.phone}
+                </a>
               </div>
             </Reveal>
-          ))}
+          </div>
+
+          <Reveal delay={120}>
+            <div className="border-t border-deep-border pt-8">
+              <p className="eyebrow text-river">Focus areas</p>
+              <ul className="mt-6 flex flex-col">
+                {firm.principal.focus.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-baseline gap-4 border-b border-deep-border py-4 text-base text-deep-foreground"
+                  >
+                    <span className="h-1 w-1 shrink-0 rounded-full bg-clay" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-sm leading-relaxed text-deep-muted">
+                Licensed professional engineer in {firm.licensedIn.join(", ")}. Every deliverable
+                that leaves this firm is stamped by the principal named above.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -268,8 +259,8 @@ function Affiliations() {
         <div>
           <Reveal>
             <p className="font-display text-[clamp(1.35rem,2.2vw,1.75rem)] leading-[1.3]">
-              Licensed professional engineering firm in {firm.licensedIn.join(", ")}. Our people sit
-              on state and regional technical committees and publish through:
+              Licensed professional engineering firm in {firm.licensedIn.join(", ")}. Active in
+              state and regional technical committees through:
             </p>
           </Reveal>
           <div className="mt-10 grid gap-x-10 gap-y-4 sm:grid-cols-2">
