@@ -85,13 +85,13 @@ function ProjectPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_320px] lg:gap-20">
           <div>
             <NarrativeBlock label="The situation" body={project.situation} />
-            <NarrativeBlock label="Our approach" body={project.approach} />
+            <NarrativeBlock label="My approach" body={project.approach} />
             <NarrativeBlock label="The outcome" body={project.outcome} />
           </div>
 
           <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
             <div>
-              <p className="eyebrow text-muted-foreground">Our role</p>
+              <p className="eyebrow text-muted-foreground">My role</p>
               <p className="mt-3 text-sm leading-relaxed text-foreground">{project.role}</p>
             </div>
             <div>
@@ -110,7 +110,7 @@ function ProjectPage() {
             <div className="bg-secondary/60 p-6">
               <p className="eyebrow text-muted-foreground">Talk about a similar project</p>
               <p className="mt-3 text-sm leading-relaxed text-foreground">
-                We are happy to walk a client or a reviewer through the model behind any of these.
+                I am happy to walk a client or a reviewer through the model behind any of these.
               </p>
               <Link
                 to="/contact"

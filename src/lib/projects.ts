@@ -48,7 +48,7 @@ export const projects: Project[] = [
     situation:
       "Aging levee reaches had never been certified to current criteria, and two segments sat in a FEMA-identified floodway with no documented freeboard. The district faced rising insurance costs and an unresolved federal hazard-mitigation grant.",
     approach:
-      "We ran a two-dimensional HEC-RAS model of the study reach, then paired it with 4.2 miles of boundary and topographic survey to reconstruct the existing ground line. Levee stability, seepage, and freeboard were evaluated reach by reach, and the design was split into a floodwall segment through the urban core and a raised-earth alignment through the park system.",
+      "I ran a two-dimensional HEC-RAS model of the study reach, then paired it with 4.2 miles of boundary and topographic survey to reconstruct the existing ground line. Levee stability, seepage, and freeboard were evaluated reach by reach, and the design was split into a floodwall segment through the urban core and a raised-earth alignment through the park system.",
     outcome:
       "The package supported a DLOMR that the district carried through to a CLOMR and a final federal grant award. Construction is complete through the two highest-priority reaches, with the remaining segments designed and phased for future funding.",
     services: [
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     situation:
       "Decades of upstream urbanization pushed peak flows higher and faster. The creek responded by incising five feet and then failing banks into a county trail, two irrigation diversions, and a residential edge.",
     approach:
-      "A sediment transport and geomorphic assessment set the target grade. We designed a series of rock vanes, root-wad toe protectors, and three constricted habitat pools keyed to that grade, then specified live-stake plantings so the banks would hold while the vegetation established.",
+      "A sediment transport and geomorphic assessment set the target grade. I designed a series of rock vanes, root-wad toe protectors, and three constricted habitat pools keyed to that grade, then specified live-stake plantings so the banks would hold while the vegetation established.",
     outcome:
       "The restored reach held a two-year event within six weeks of planting and a five-year event the following spring. Bank retreat has stopped at the three critical sites and the county's trail maintenance costs dropped by roughly a third.",
     services: [
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     situation:
       "The district's preliminary plat predated the current detention criteria, and the downstream receiving channel had a documented capacity shortfall that would have stalled phase two.",
     approach:
-      "We built a single HEC-HMS / HEC-RAS framework covering all three phases with agreed-upon imperviousness endpoints, so every future submittal reused the same model. Water quality was met with a treatment train of bioswales feeding a dual-cell detention basin rather than a single large pond.",
+      "I built a single HEC-HMS / HEC-RAS framework covering all three phases with agreed-upon imperviousness endpoints, so every future submittal reused the same model. Water quality was met with a treatment train of bioswales feeding a dual-cell detention basin rather than a single large pond.",
     outcome:
       "Phase one permitted in a single review cycle. The framework was accepted by the city and the state as the reference model for the remaining phases, removing an estimated nine months of re-analysis from the district's schedule.",
     services: [
@@ -182,7 +182,7 @@ export const projects: Project[] = [
     situation:
       "The river moves. The existing structure was hydraulically inefficient, the channel had migrated roughly 140 feet since the original survey, and the project had to clear state and federal review on a fixed schedule.",
     approach:
-      "We reconstructed thalweg position from thirty years of aerial imagery, built a one-dimensional model checked against a localized two-dimensional mesh, and ran the full scour suite. The report recommended a longer span with armored toe protection keyed into the downstream alignment.",
+      "I reconstructed thalweg position from thirty years of aerial imagery, built a one-dimensional model checked against a localized two-dimensional mesh, and ran the full scour suite. The report recommended a longer span with armored toe protection keyed into the downstream alignment.",
     outcome:
       "The design was permitted without a compensatory-mitigation condition, and the recommended span was adopted by the transportation department's replacement program.",
     services: [
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     situation:
       "The bank needed to produce durable, defensible credits on ground that had been farmed for eighty years, with a water budget that could not rely on a single source.",
     approach:
-      "We re-graded the field into a mosaic of shallow cells with controlled inlet and outlet structures, then instrumented the site with monitoring wells, staff gauges, and a flow-control regime that could be adjusted seasonally. Vegetation was specified as native emergent mixes with an establishment-year water management plan.",
+      "I re-graded the field into a mosaic of shallow cells with controlled inlet and outlet structures, then instrumented the site with monitoring wells, staff gauges, and a flow-control regime that could be adjusted seasonally. Vegetation was specified as native emergent mixes with an establishment-year water management plan.",
     outcome:
       "The bank reached its final performance criteria two years early, and the monitoring record became the reference dataset for the sponsor's next two sites.",
     services: [

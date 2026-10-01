@@ -135,7 +135,7 @@ function Values() {
     <section className="border-y border-border bg-secondary/45">
       <div className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-28">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">How we behave</p>
+          <p className="eyebrow text-muted-foreground">How I work</p>
         </Reveal>
         <Reveal delay={80}>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06]">
