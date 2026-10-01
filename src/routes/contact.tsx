@@ -28,7 +28,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to a water resources engineer about flood risk, drainage, stream restoration, or water supply work. Based in Denver, Colorado.",
+          "Talk to a water resources engineer about flood risk, drainage, stream restoration, or water supply work. Based in Portland, Oregon.",
       },
       { property: "og:title", content: "Contact Zucker Engineering & Design" },
       {

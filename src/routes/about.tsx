@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Zucker Engineering & Design is a single-principal water resources engineering practice founded in 2009, licensed in seven western states and working across the Mountain West.",
+          "Zucker Engineering & Design is a single-principal water resources engineering practice founded in 2018, licensed in Oregon and Washington and working across the Pacific Northwest.",
       },
       { property: "og:title", content: "About Zucker Engineering & Design" },
       {
@@ -88,7 +88,7 @@ function Story() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Seventeen years later that conviction hasn't changed. Water resources work is
+              Eight years later that conviction hasn't changed. Water resources work is
               site-specific, relationship-heavy, and unforgiving of guesswork. The firms that do it
               well are usually the ones where the person who ran the model is the person standing on
               the bank when the structure is built.

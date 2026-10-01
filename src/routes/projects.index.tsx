@@ -28,7 +28,7 @@ export const Route = createFileRoute("/projects/")({
       {
         property: "og:description",
         content:
-          "Selected water resources engineering case studies across the Mountain West, with the numbers behind them.",
+          "Selected water resources engineering case studies across the Pacific Northwest, with the numbers behind them.",
       },
     ],
   }),
