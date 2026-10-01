@@ -117,7 +117,7 @@ function Hero() {
             className="mt-6 animate-rise font-display text-[clamp(2.6rem,6.2vw,5.25rem)] leading-[0.98] text-deep-foreground"
             style={{ animationDelay: "90ms" }}
           >
-            We design for the water that{" "}
+            I design for the water that{" "}
             <span className="text-river">moves, floods, and runs out.</span>
           </h1>
           <p
@@ -136,7 +136,7 @@ function Hero() {
               to="/projects"
               className="eyebrow bg-primary px-6 py-4 text-primary-foreground transition-colors hover:bg-river hover:text-deep"
             >
-              View our work
+              View my work
             </Link>
             <Link
               to="/contact"
@@ -167,14 +167,14 @@ function Positioning() {
     <section className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-32">
       <div className="grid gap-10 lg:grid-cols-[220px_1fr] lg:gap-16">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">Who we are</p>
+          <p className="eyebrow text-muted-foreground">Who I am</p>
         </Reveal>
         <div>
           <Reveal>
             <p className="font-display text-[clamp(1.6rem,3.2vw,2.6rem)] leading-[1.18] text-foreground">
               Flood, drainage, and water supply problems rarely arrive on their own. They arrive as
               a permitting deadline, a failing bank, a capacity shortfall, and a bond measure that
-              has to pass. We take the whole thing on — the modeling, the design, the regulatory
+              has to pass. I take the whole thing on — the modeling, the design, the regulatory
               path, and the field work that proves it.
             </p>
           </Reveal>
@@ -232,7 +232,7 @@ function Approach() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-24">
           <div>
             <Reveal>
-              <p className="eyebrow text-river">How we work</p>
+              <p className="eyebrow text-river">How I work</p>
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] text-deep-foreground">
@@ -321,7 +321,7 @@ function AboutTeaser() {
           </Reveal>
           <Reveal delay={260}>
             <div className="mt-9">
-              <ArrowLink to="/about">Our story &amp; how we work</ArrowLink>
+              <ArrowLink to="/about">My story &amp; how I work</ArrowLink>
             </div>
           </Reveal>
         </div>
@@ -341,7 +341,7 @@ function CallToAction() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-4 max-w-2xl font-display text-[clamp(1.9rem,3.6vw,2.9rem)] leading-[1.08]">
-                Send us the reach, the basin, or the drawing set — we will tell you what we think.
+                Send me the reach, the basin, or the drawing set — I will tell you what I think.
               </h2>
             </Reveal>
           </div>

@@ -10,13 +10,13 @@ import { firm, needs } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const schema = z.object({
-  name: z.string().min(2, "Please tell us your name."),
+  name: z.string().min(2, "Please tell me your name."),
   organization: z.string().min(1, "Which agency, district, or company?"),
   email: z.string().email("That email doesn't look right."),
   phone: z.string().optional(),
   need: z.string().min(1, "Pick the closest match."),
   location: z.string().optional(),
-  message: z.string().min(20, "A sentence or two helps us route this correctly."),
+  message: z.string().min(20, "A sentence or two helps me route this correctly."),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content:
-          "Send us the reach, the basin, or the drawing set — we will tell you what we think.",
+          "Send me the reach, the basin, or the drawing set — I will tell you what I think.",
       },
     ],
   }),
@@ -66,7 +66,7 @@ function ContactPage() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.02]">
-              Send us the reach, the basin, or the drawing set
+              Send me the reach, the basin, or the drawing set
             </h1>
           </Reveal>
           <Reveal delay={160}>
@@ -87,10 +87,10 @@ function ContactPage() {
                   <span className="grid h-11 w-11 place-items-center bg-primary text-primary-foreground">
                     <Check className="h-5 w-5" />
                   </span>
-                  <h2 className="mt-6 font-display text-3xl">Thanks — we have it</h2>
+                  <h2 className="mt-6 font-display text-3xl">Thanks — I have it</h2>
                   <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
                     You will usually hear back within one business day. To be certain your message
-                    reaches us, press the button below and it will open in your own email app ready
+                    reaches me, press the button below and it will open in your own email app ready
                     to send.
                   </p>
                   <div className="mt-8 flex flex-wrap gap-4">
@@ -186,7 +186,7 @@ function ContactPage() {
 
                   <div className="sm:col-span-2">
                     <label htmlFor="message" className={labelClass}>
-                      Tell us about the project <span className="text-clay">*</span>
+                      Tell me about the project <span className="text-clay">*</span>
                     </label>
                     <textarea
                       id="message"

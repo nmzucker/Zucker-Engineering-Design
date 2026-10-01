@@ -65,7 +65,7 @@ function ProjectsPage() {
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Six case studies across flood risk, drainage, streams, water supply, and wetlands.
-              Each one says what the problem was, what we did, and what happened after.
+              Each one says what the problem was, what I did, and what happened after.
             </p>
           </Reveal>
         </div>
@@ -124,7 +124,7 @@ function ProjectsPage() {
           <div className="mt-16 border-t border-border py-16 text-center">
             <p className="font-display text-2xl">Nothing matches that yet</p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Try a different sector, or tell us what you're looking for.
+              Try a different sector, or tell me what you're looking for.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <button
@@ -147,7 +147,7 @@ function ProjectsPage() {
         <div className="mx-auto grid max-w-[88rem] items-center gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
             <h2 className="max-w-2xl font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.1]">
-              The right reference depends on your basin, not ours
+              The right reference depends on your basin, not mine
             </h2>
           </Reveal>
           <Reveal delay={100}>
