@@ -11,8 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as CapabilitiesRouteImport } from './routes/capabilities'
-import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
@@ -26,16 +24,6 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CapabilitiesRoute = CapabilitiesRouteImport.update({
-  id: '/capabilities',
-  path: '/capabilities',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -62,8 +50,6 @@ const ProjectsSlugRoute = ProjectsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/capabilities': typeof CapabilitiesRoute
-  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -72,8 +58,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/capabilities': typeof CapabilitiesRoute
-  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects': typeof ProjectsIndexRoute
@@ -82,8 +66,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/capabilities': typeof CapabilitiesRoute
-  '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
   '/projects': typeof ProjectsRouteWithChildren
   '/projects/$slug': typeof ProjectsSlugRoute
@@ -92,29 +74,13 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
-    | '/about'
-    | '/capabilities'
-    | '/careers'
-    | '/contact'
-    | '/projects'
-    | '/projects/$slug'
-    | '/projects/'
+    '/' | '/about' | '/contact' | '/projects' | '/projects/$slug' | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/capabilities'
-    | '/careers'
-    | '/contact'
-    | '/projects/$slug'
-    | '/projects'
+  to: '/' | '/about' | '/contact' | '/projects/$slug' | '/projects'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/capabilities'
-    | '/careers'
     | '/contact'
     | '/projects'
     | '/projects/$slug'
@@ -124,8 +90,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  CapabilitiesRoute: typeof CapabilitiesRoute
-  CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
   ProjectsRoute: typeof ProjectsRouteWithChildren
 }
@@ -144,20 +108,6 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/capabilities': {
-      id: '/capabilities'
-      path: '/capabilities'
-      fullPath: '/capabilities'
-      preLoaderRoute: typeof CapabilitiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -208,8 +158,6 @@ const ProjectsRouteWithChildren = ProjectsRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  CapabilitiesRoute: CapabilitiesRoute,
-  CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
   ProjectsRoute: ProjectsRouteWithChildren,
 }

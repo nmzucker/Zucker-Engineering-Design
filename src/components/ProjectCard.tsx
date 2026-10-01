@@ -66,7 +66,7 @@ export function ArrowLink({
   className,
   tone = "ink",
 }: {
-  to: "/" | "/projects" | "/about" | "/capabilities" | "/contact" | "/careers";
+  to: "/" | "/projects" | "/about" | "/contact";
   children: React.ReactNode;
   className?: string;
   tone?: "ink" | "paper";
