@@ -1,23 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 
 import heroImage from "@/assets/hero-river.jpg";
 import aboutField from "@/assets/about-field.jpg";
 import { ArrowLink, ProjectCard } from "@/components/ProjectCard";
 import { Reveal, Rule } from "@/components/Reveal";
-import { capabilities, firm } from "@/lib/site";
+import { firm } from "@/lib/site";
 import { projects } from "@/lib/projects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Zucker Engineering & Design — Water Resources Engineering, Denver & Boise",
+        title: "Zucker Engineering & Design — Water Resources Engineering, Denver, Colorado",
       },
       {
         name: "description",
         content:
-          "A water resources engineering firm delivering flood risk, drainage and stormwater, stream restoration, and water supply projects across the Mountain West.",
+          "A single-principal water resources engineering practice delivering flood risk, drainage and stormwater, stream restoration, and water supply projects across the Mountain West.",
       },
       { property: "og:title", content: "Zucker Engineering & Design" },
       {
@@ -39,6 +38,25 @@ const clientTypes = [
   "Tribes & mitigation sponsors",
 ];
 
+const whatYouGet = [
+  {
+    title: "A site walk before a proposal",
+    body: "The scope is written after the bank has been walked, not after the RFP was read.",
+  },
+  {
+    title: "The model with the drawings",
+    body: "Assumptions, calibration notes, and the working files travel with the deliverable.",
+  },
+  {
+    title: "A named engineer of record",
+    body: "One licensed principal answers the reviewer, the agency, and the contractor.",
+  },
+  {
+    title: "Field presence through construction",
+    body: "Observation and field decisions stay with the person who designed the work.",
+  },
+];
+
 function Index() {
   const featured = projects.filter((project) => project.featured).slice(0, 4);
 
@@ -46,7 +64,6 @@ function Index() {
     <>
       <Hero />
       <Positioning />
-      <CapabilitiesIndex />
       <FeaturedProjects projects={featured} />
       <Approach />
       <AboutTeaser />
@@ -93,7 +110,8 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[92svh] max-w-[88rem] flex-col justify-end px-5 pb-14 pt-32 sm:px-8 sm:pb-20">
         <div className="max-w-3xl">
           <p className="eyebrow animate-rise text-river">
-            Water resources engineering · Est. {firm.founded} · Denver &amp; Boise
+            Water resources engineering · Est. {firm.founded} · {firm.office.city},{" "}
+            {firm.office.region}
           </p>
           <h1
             className="mt-6 animate-rise font-display text-[clamp(2.6rem,6.2vw,5.25rem)] leading-[0.98] text-deep-foreground"
@@ -106,9 +124,9 @@ function Hero() {
             className="mt-7 max-w-xl animate-rise text-base leading-relaxed text-deep-muted sm:text-lg"
             style={{ animationDelay: "180ms" }}
           >
-            Zucker Engineering &amp; Design is a water resources firm working the river corridors,
-            drainage systems, and water supplies of the Mountain West — from the first survey shot
-            to the final stamped drawing.
+            Zucker Engineering &amp; Design is a water resources practice working the river
+            corridors, drainage systems, and water supplies of the Mountain West — from the first
+            survey shot to the final stamped drawing.
           </p>
           <div
             className="mt-9 flex animate-rise flex-wrap items-center gap-4"
@@ -129,7 +147,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-deep-border pt-8 sm:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-x-6 gap-y-8 border-t border-deep-border pt-8 sm:grid-cols-3">
           {firm.stats.map((stat) => (
             <div key={stat.label}>
               <p className="font-display text-3xl text-deep-foreground sm:text-4xl">
@@ -177,76 +195,31 @@ function Positioning() {
   );
 }
 
-function CapabilitiesIndex() {
+function FeaturedProjects({ projects: list }: { projects: typeof projects }) {
   return (
     <section className="border-y border-border bg-secondary/45">
-      <div className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-28">
+      <div className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-32">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <Reveal>
-              <p className="eyebrow text-muted-foreground">Capabilities</p>
+              <p className="eyebrow text-muted-foreground">Selected projects</p>
             </Reveal>
             <Reveal delay={80}>
-              <h2 className="mt-4 max-w-xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
-                Six practices, one project team
+              <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
+                Work that is still holding ten years later
               </h2>
             </Reveal>
           </div>
           <Reveal delay={160}>
-            <ArrowLink to="/capabilities">All capabilities</ArrowLink>
+            <ArrowLink to="/projects">Full project list</ArrowLink>
           </Reveal>
         </div>
 
-        <div className="mt-14 border-t border-border">
-          {capabilities.map((capability, index) => (
-            <Reveal key={capability.slug} delay={index * 60}>
-              <Link
-                to="/capabilities"
-                search={{ focus: capability.slug }}
-                className="group grid grid-cols-[auto_1fr] items-start gap-5 border-b border-border py-7 transition-colors hover:bg-background sm:grid-cols-[60px_1.1fr_1.4fr_auto] sm:items-center sm:gap-8"
-              >
-                <span className="eyebrow pt-2 text-muted-foreground">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display text-xl leading-snug text-foreground sm:text-2xl">
-                  {capability.title}
-                </h3>
-                <p className="col-span-2 text-sm leading-relaxed text-muted-foreground sm:col-span-1">
-                  {capability.lede}
-                </p>
-                <ArrowUpRight className="hidden h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary sm:block" />
-              </Link>
-            </Reveal>
+        <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          {list.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-function FeaturedProjects({ projects: list }: { projects: typeof projects }) {
-  return (
-    <section className="mx-auto max-w-[88rem] px-5 py-24 sm:px-8 sm:py-32">
-      <div className="flex flex-wrap items-end justify-between gap-6">
-        <div>
-          <Reveal>
-            <p className="eyebrow text-muted-foreground">Selected projects</p>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
-              Work that is still holding ten years later
-            </h2>
-          </Reveal>
-        </div>
-        <Reveal delay={160}>
-          <ArrowLink to="/projects">Full project list</ArrowLink>
-        </Reveal>
-      </div>
-
-      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
-        {list.map((project, index) => (
-          <ProjectCard key={project.slug} project={project} index={index} />
-        ))}
       </div>
     </section>
   );
@@ -268,7 +241,7 @@ function Approach() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-7 max-w-md text-base leading-relaxed text-deep-muted">
-                We hand over everything that produced the answer. When a reviewer, a state
+                Everything that produced the answer gets handed over. When a reviewer, a state
                 engineer, or your successor asks how a number was reached, the file already has the
                 response.
               </p>
@@ -283,20 +256,19 @@ function Approach() {
           </div>
 
           <div className="grid gap-px bg-deep-border sm:grid-cols-2">
-            {firm.stats.slice(0, 2).map((stat) => (
-              <div key={stat.label} className="bg-deep p-8">
-                <p className="font-display text-5xl text-deep-foreground">{stat.value}</p>
-                <p className="eyebrow mt-3 text-deep-muted">{stat.label}</p>
-              </div>
+            {whatYouGet.map((item, index) => (
+              <Reveal key={item.title} delay={index * 70}>
+                <div className="h-full bg-deep p-8">
+                  <p className="eyebrow text-river">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-5 font-display text-xl leading-snug text-deep-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-deep-muted">{item.body}</p>
+                </div>
+              </Reveal>
             ))}
-            <div className="bg-deep p-8">
-              <p className="font-display text-5xl text-deep-foreground">22</p>
-              <p className="eyebrow mt-3 text-deep-muted">miles of stream restored</p>
-            </div>
-            <div className="bg-deep p-8">
-              <p className="font-display text-5xl text-deep-foreground">100%</p>
-              <p className="eyebrow mt-3 text-deep-muted">of projects led by a PE</p>
-            </div>
           </div>
         </div>
       </div>
@@ -312,7 +284,7 @@ function AboutTeaser() {
           <div className="plate aspect-[4/3] w-full">
             <img
               src={aboutField}
-              alt="Two engineers in hard hats reviewing plans on a stone riprap riverbank"
+              alt="Engineer in a hard hat reviewing plans on a stone riprap riverbank"
               loading="lazy"
               width={1408}
               height={912}
@@ -326,36 +298,30 @@ function AboutTeaser() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
-              A firm built by engineers who wanted to stay on the project
+              One engineer, start to finish — on purpose
             </h2>
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Zucker Engineering &amp; Design started in {firm.founded} with two people and a
-              floodplain mapping contract. We grew by doing the unglamorous parts well: the survey,
-              the calibration run, the second call to the regulator, the walk-down at five in the
-              morning when the concrete is going in.
+              Zucker Engineering &amp; Design was founded in {firm.founded} on a simple idea: the
+              person who runs the model should be the person who signs the drawing and stands on
+              the bank when it is built. Everything else about how this firm runs follows from that
+              — short project lists, direct access, and no layers between you and the engineering.
             </p>
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-9 flex flex-wrap gap-x-10 gap-y-6 border-t border-border pt-8">
-              <div>
-                <p className="font-display text-3xl">48</p>
-                <p className="eyebrow mt-2 text-muted-foreground">Engineers &amp; scientists</p>
-              </div>
-              <div>
-                <p className="font-display text-3xl">{firm.licensedIn.length}</p>
-                <p className="eyebrow mt-2 text-muted-foreground">States licensed</p>
-              </div>
-              <div>
-                <p className="font-display text-3xl">2</p>
-                <p className="eyebrow mt-2 text-muted-foreground">Offices</p>
-              </div>
+              {firm.stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="font-display text-3xl">{stat.value}</p>
+                  <p className="eyebrow mt-2 text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </Reveal>
           <Reveal delay={260}>
             <div className="mt-9">
-              <ArrowLink to="/about">Our story &amp; leadership</ArrowLink>
+              <ArrowLink to="/about">Our story &amp; how we work</ArrowLink>
             </div>
           </Reveal>
         </div>

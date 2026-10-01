@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 import { Logo } from "@/components/Logo";
-import { capabilities, firm, nav } from "@/lib/site";
+import { sectors } from "@/lib/projects";
+import { firm, nav } from "@/lib/site";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -44,28 +45,32 @@ export function SiteFooter() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="Capabilities">
-            {capabilities.slice(0, 5).map((item) => (
+          <FooterColumn title="Work by sector">
+            {sectors.map((sector) => (
               <Link
-                key={item.slug}
-                to="/capabilities"
-                search={{ focus: item.slug }}
+                key={sector}
+                to="/projects"
+                search={{ sector }}
                 className="text-sm text-deep-muted transition-colors hover:text-deep-foreground"
               >
-                {item.title}
+                {sector}
               </Link>
             ))}
           </FooterColumn>
 
-          <FooterColumn title="Offices">
-            {firm.offices.map((office) => (
-              <div key={office.city} className="text-sm text-deep-muted">
-                <p className="eyebrow mb-1 text-deep-foreground">{office.city}</p>
-                {office.address.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </div>
-            ))}
+          <FooterColumn title={firm.office.role}>
+            <div className="text-sm text-deep-muted">
+              <p className="eyebrow mb-1 text-deep-foreground">
+                {firm.office.city}, {firm.office.region}
+              </p>
+              <p>{firm.office.serviceArea}</p>
+              <a
+                href={`tel:${firm.office.phone.replace(/[^\d+]/g, "")}`}
+                className="mt-3 inline-block text-deep-foreground transition-colors hover:text-river"
+              >
+                {firm.office.phone}
+              </a>
+            </div>
           </FooterColumn>
         </div>
 
@@ -74,7 +79,7 @@ export function SiteFooter() {
             © {year} {firm.name}. All rights reserved.
           </p>
           <p className="eyebrow">
-            Professional Engineering Firm · CO · ID · MT · NE · NM · UT · WY
+            Professional Engineering Firm · {firm.licensedIn.join(" · ")}
           </p>
         </div>
       </div>
