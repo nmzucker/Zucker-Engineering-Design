@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Water resources engineering and design: flood risk, drainage and stormwater, stream restoration, water supply and treatment. Denver and Boise.",
+          "Water resources engineering and design: flood risk, drainage and stormwater, stream restoration, water supply and treatment. Licensed in seven western states.",
       },
       { name: "author", content: "Zucker Engineering & Design" },
       { property: "og:title", content: "Zucker Engineering & Design" },
