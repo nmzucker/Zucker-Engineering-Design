@@ -11,12 +11,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Zucker Engineering & Design — Water Resources Engineering, Denver, Colorado",
+        title: "Zucker Engineering & Design — Water Resources Engineering, Portland, Oregon",
       },
       {
         name: "description",
         content:
-          "A single-principal water resources engineering practice delivering flood risk, drainage and stormwater, stream restoration, and water supply projects across the Mountain West.",
+          "A single-principal water resources engineering practice delivering flood risk, drainage and stormwater, stream restoration, and water supply projects across the Pacific Northwest.",
       },
       { property: "og:title", content: "Zucker Engineering & Design" },
       {
@@ -125,7 +125,7 @@ function Hero() {
             style={{ animationDelay: "180ms" }}
           >
             Zucker Engineering &amp; Design is a water resources practice working the river
-            corridors, drainage systems, and water supplies of the Mountain West — from the first
+            corridors, drainage systems, and water supplies of the Pacific Northwest — from the first
             survey shot to the final stamped drawing.
           </p>
           <div
