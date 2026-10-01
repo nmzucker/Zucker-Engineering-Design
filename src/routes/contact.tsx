@@ -89,7 +89,7 @@ function ContactPage() {
                   </span>
                   <h2 className="mt-6 font-display text-3xl">Thanks — we have it</h2>
                   <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-                    A principal usually replies within one business day. To be certain your message
+                    You will usually hear back within one business day. To be certain your message
                     reaches us, press the button below and it will open in your own email app ready
                     to send.
                   </p>
@@ -221,29 +221,28 @@ function ContactPage() {
           </div>
 
           <aside className="flex flex-col gap-10">
-            {firm.offices.map((office) => (
-              <Reveal key={office.city}>
-                <div className="border-t border-border pt-6">
-                  <p className="eyebrow text-muted-foreground">{office.role}</p>
-                  <h2 className="mt-3 font-display text-2xl">{office.city}</h2>
-                  <address className="mt-4 flex flex-col gap-1 text-sm not-italic leading-relaxed text-muted-foreground">
-                    {office.address.map((line) => (
-                      <span key={line} className="flex items-start gap-2">
-                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                  <a
-                    href={`tel:${office.phone.replace(/[^\d+]/g, "")}`}
-                    className="mt-4 flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
-                  >
-                    <Phone className="h-4 w-4 text-primary" />
-                    {office.phone}
-                  </a>
-                </div>
-              </Reveal>
-            ))}
+            <Reveal>
+              <div className="border-t border-border pt-6">
+                <p className="eyebrow text-muted-foreground">{firm.office.role}</p>
+                <h2 className="mt-3 font-display text-2xl">
+                  {firm.office.city}, {firm.office.region}
+                </h2>
+                <address className="mt-4 flex flex-col gap-1 text-sm not-italic leading-relaxed text-muted-foreground">
+                  <span className="flex items-start gap-2">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    {firm.office.serviceArea}
+                  </span>
+                </address>
+                <a
+                  href={`tel:${firm.office.phone.replace(/[^\d+]/g, "")}`}
+                  className="mt-4 flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary"
+                >
+                  <Phone className="h-4 w-4 text-primary" />
+                  {firm.office.phone}
+                </a>
+              </div>
+            </Reveal>
+
 
             <Reveal>
               <div className="border-t border-border pt-6">
@@ -257,7 +256,7 @@ function ContactPage() {
                 <p className="eyebrow text-muted-foreground">Typical response</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   One business day for general inquiries. Same-day for an active construction
-                  issue — call the Denver line and ask for the engineer of record.
+                  issue — call and ask for the engineer of record.
                 </p>
               </div>
             </Reveal>
