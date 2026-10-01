@@ -1,14 +1,14 @@
-# Roadmap
+# Zucker Engineering & Design — roadmap
 
 ## Done
-- Multi-page site in the Stantec/Olsson register (design tokens, generated imagery, header/footer, reveal animations)
-- Case-study routing fix: `/projects` is a layout, listing lives at `/projects/`
-- Removed the careers and capabilities pages and every link to them; both URLs now 404
-- Re-voiced the firm copy for a one-principal practice (stats, about page, footer, contact aside, metadata)
-- Verified: all five pages and all six case studies render clean, filters and deep links work, type check passes
+- Landing page, about, projects (six case studies + sector filters), contact form
+- Careers and capabilities pages removed; site reads as a one-person practice
+- All copy switched to first-person singular ("I")
 
-## Open
-- [ ] Replace invented details with real ones (blocked on Noah's input): principal name/title/bio and PE license number, office address, phone, email, the six projects and their real numbers, licensing states, affiliations
-- [ ] Decide the site voice: firm "we" (current) or first-person "I"
-- [ ] Contact form currently hands the message to the visitor's own email app; wire a real backend once the real inbox is known
-- [ ] Swap the two-person field photo for a single-engineer image if the current one no longer fits
+## Open — needs real information from Noah
+- Principal name, title, bio, PE license number
+- Office address, phone, email (placeholders now: 1440 Wewatta St #700, (303) 555-0142, studio@zuckerengineering.com)
+- The six projects: real clients, locations, years, budgets, outcomes
+- States licensed in, association memberships
+- Real photo of Noah for the about page (currently an AI-generated portrait)
+- Where enquiries should land (currently the form opens the visitor's email app)
