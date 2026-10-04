@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Zucker Engineering Hub
+
+I want to create a website for an engineering company called Zucker Engineering and Design. I want this to be a landing page where I can view past projects, about, and all other stuff an engineering company has. This is for a water resources engineering firm. I want the style to be like the website landing pages for companies like stantec, trihydro, olsson, etc
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/86585da7-5939-4c9a-b282-6c56aaf0d63a).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
