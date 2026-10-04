@@ -11,18 +11,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Zucker Engineering & Design — Water Resources Engineering, Portland, Oregon",
+        title: "Zucker Engineering & Design — Portland, Oregon",
       },
       {
         name: "description",
         content:
-          "A single-principal water resources engineering practice delivering flood risk, drainage and stormwater, stream restoration, and water supply projects across the Pacific Northwest.",
+          "Company description placeholder — one or two sentences describing the firm for search results.",
       },
       { property: "og:title", content: "Zucker Engineering & Design" },
       {
         property: "og:description",
-        content:
-          "Water resources engineering for the places where the water is hardest to manage.",
+        content: "Company description placeholder — one or two sentences describing the firm.",
       },
     ],
   }),
@@ -30,30 +29,30 @@ export const Route = createFileRoute("/")({
 });
 
 const clientTypes = [
-  "Cities & counties",
-  "Special districts",
-  "State & federal agencies",
-  "Developers & landowners",
-  "Water & wastewater authorities",
-  "Tribes & mitigation sponsors",
+  "Client type one",
+  "Client type two",
+  "Client type three",
+  "Client type four",
+  "Client type five",
+  "Client type six",
 ];
 
 const whatYouGet = [
   {
-    title: "A site walk before a proposal",
-    body: "The scope is written after the bank has been walked, not after the RFP was read.",
+    title: "What you get — one",
+    body: "Placeholder — one or two sentences about what a client gets working with this firm.",
   },
   {
-    title: "The model with the drawings",
-    body: "Assumptions, calibration notes, and the working files travel with the deliverable.",
+    title: "What you get — two",
+    body: "Placeholder — one or two sentences about what a client gets working with this firm.",
   },
   {
-    title: "A named engineer of record",
-    body: "One licensed principal answers the reviewer, the agency, and the contractor.",
+    title: "What you get — three",
+    body: "Placeholder — one or two sentences about what a client gets working with this firm.",
   },
   {
-    title: "Field presence through construction",
-    body: "Observation and field decisions stay with the person who designed the work.",
+    title: "What you get — four",
+    body: "Placeholder — one or two sentences about what a client gets working with this firm.",
   },
 ];
 
