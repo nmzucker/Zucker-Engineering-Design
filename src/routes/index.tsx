@@ -110,23 +110,22 @@ function Hero() {
       <div className="relative mx-auto flex min-h-[92svh] max-w-[88rem] flex-col justify-end px-5 pb-14 pt-32 sm:px-8 sm:pb-20">
         <div className="max-w-3xl">
           <p className="eyebrow animate-rise text-river">
-            Water resources engineering · Est. {firm.founded} · {firm.office.city},{" "}
+            Field of practice placeholder · Est. {firm.founded} · {firm.office.city},{" "}
             {firm.office.region}
           </p>
           <h1
             className="mt-6 animate-rise font-display text-[clamp(2.6rem,6.2vw,5.25rem)] leading-[0.98] text-deep-foreground"
             style={{ animationDelay: "90ms" }}
           >
-            I design for the water that{" "}
-            <span className="text-river">moves, floods, and runs out.</span>
+            Headline placeholder —{" "}
+            <span className="text-river">one short line about what I do.</span>
           </h1>
           <p
             className="mt-7 max-w-xl animate-rise text-base leading-relaxed text-deep-muted sm:text-lg"
             style={{ animationDelay: "180ms" }}
           >
-            Zucker Engineering &amp; Design is a water resources practice working the river
-            corridors, drainage systems, and water supplies of the Pacific Northwest — from the first
-            survey shot to the final stamped drawing.
+            Company description placeholder — two or three sentences introducing the firm, the
+            kind of work it does, and where it works.
           </p>
           <div
             className="mt-9 flex animate-rise flex-wrap items-center gap-4"
@@ -172,10 +171,8 @@ function Positioning() {
         <div>
           <Reveal>
             <p className="font-display text-[clamp(1.6rem,3.2vw,2.6rem)] leading-[1.18] text-foreground">
-              Flood, drainage, and water supply problems rarely arrive on their own. They arrive as
-              a permitting deadline, a failing bank, a capacity shortfall, and a bond measure that
-              has to pass. I take the whole thing on — the modeling, the design, the regulatory
-              path, and the field work that proves it.
+              Positioning statement placeholder — two or three sentences about the problems I
+              take on and how I approach them.
             </p>
           </Reveal>
           <Rule className="mt-14" />
@@ -206,7 +203,7 @@ function FeaturedProjects({ projects: list }: { projects: typeof projects }) {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
-                Work that is still holding ten years later
+                Projects section headline placeholder
               </h2>
             </Reveal>
           </div>
@@ -236,14 +233,13 @@ function Approach() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05] text-deep-foreground">
-                The model, the assumptions, and the notes that tie them together
+                Approach section headline placeholder
               </h2>
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-7 max-w-md text-base leading-relaxed text-deep-muted">
-                Everything that produced the answer gets handed over. When a reviewer, a state
-                engineer, or your successor asks how a number was reached, the file already has the
-                response.
+                Approach description placeholder — two or three sentences about how I work and
+                what clients can expect.
               </p>
             </Reveal>
             <Reveal delay={200}>
@@ -298,15 +294,13 @@ function AboutTeaser() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.25rem)] leading-[1.05]">
-              One engineer, start to finish — on purpose
+              About section headline placeholder
             </h2>
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Zucker Engineering &amp; Design was founded in {firm.founded} on a simple idea: the
-              person who runs the model should be the person who signs the drawing and stands on
-              the bank when it is built. Everything else about how this firm runs follows from that
-              — short project lists, direct access, and no layers between you and the engineering.
+              About the firm placeholder — two or three sentences about why the firm was founded
+              in {firm.founded} and how it runs.
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -341,7 +335,7 @@ function CallToAction() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-4 max-w-2xl font-display text-[clamp(1.9rem,3.6vw,2.9rem)] leading-[1.08]">
-                Send me the reach, the basin, or the drawing set — I will tell you what I think.
+                Call to action placeholder — one line inviting visitors to get in touch.
               </h2>
             </Reveal>
           </div>
