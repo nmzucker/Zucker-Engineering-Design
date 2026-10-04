@@ -11,13 +11,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Zucker Engineering & Design is a single-principal water resources engineering practice founded in 2018, licensed in Oregon and Washington and working across the Pacific Northwest.",
+          "About page description placeholder — one or two sentences about the firm for search results.",
       },
       { property: "og:title", content: "About Zucker Engineering & Design" },
       {
         property: "og:description",
-        content:
-          "One licensed engineer from the first site walk through construction closeout — no handoffs, no layers.",
+        content: "About page description placeholder — one or two sentences about the firm.",
       },
     ],
   }),
@@ -25,12 +24,12 @@ export const Route = createFileRoute("/about")({
 });
 
 const affiliations = [
-  "American Society of Civil Engineers (ASCE)",
-  "Association of Water Resources Professionals (AWRA)",
-  "Utah Water Conservers Association (UWC)",
-  "Water & Environmental Research Center (WERC)",
-  "National Association of Flood & Stormwater Management Agencies",
-  "Society of American Military Engineers (SAME)",
+  "Membership or affiliation one",
+  "Membership or affiliation two",
+  "Membership or affiliation three",
+  "Membership or affiliation four",
+  "Membership or affiliation five",
+  "Membership or affiliation six",
 ];
 
 function AboutPage() {
@@ -55,15 +54,13 @@ function PageHeader() {
         </Reveal>
         <Reveal delay={80}>
           <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.02]">
-            One principal, a long memory for every basin, and no layers in between
+            About page headline placeholder
           </h1>
         </Reveal>
         <Reveal delay={160}>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            {firm.name} was founded in {firm.founded} and has stayed deliberately small. One
-            licensed engineer carries each project from the site walk through construction
-            closeout, supported by a bench of trusted surveyors, hydrologists, and civil
-            designers. Licensed in {firm.licensedIn.length} states.
+            About the firm placeholder — two or three sentences introducing {firm.name}, founded
+            in {firm.founded}, and how the practice is set up.
           </p>
         </Reveal>
       </div>
@@ -81,24 +78,18 @@ function Story() {
           </Reveal>
           <Reveal delay={80}>
             <p className="mt-6 font-display text-[clamp(1.4rem,2.4vw,1.9rem)] leading-[1.25]">
-              The firm started with a floodplain mapping contract, a borrowed truck, and a
-              conviction that the smaller shops were better at this work than they were being given
-              credit for.
+              Story placeholder — a short opening line about how the firm started.
             </p>
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Eight years later that conviction hasn't changed. Water resources work is
-              site-specific, relationship-heavy, and unforgiving of guesswork. The firms that do it
-              well are usually the ones where the person who ran the model is the person standing on
-              the bank when the structure is built.
+              Story placeholder — a paragraph about the firm's history and what it believes about
+              the work.
             </p>
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              So the practice is structured around that. The project list stays short enough that a
-              principal is actually on it, the model and the assumptions travel with the
-              deliverable, and nobody is promoted out of the field.
+              Story placeholder — a paragraph about how the practice is structured and why.
             </p>
           </Reveal>
           <Rule className="mt-12" />
@@ -139,7 +130,7 @@ function Values() {
         </Reveal>
         <Reveal delay={80}>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06]">
-            Four rules the practice is built on
+            Values section headline placeholder
           </h2>
         </Reveal>
         <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -165,7 +156,7 @@ function Differentiators() {
         <Reveal>
           <p className="eyebrow text-muted-foreground">Why clients stay</p>
           <h2 className="mt-5 font-display text-[clamp(1.9rem,3.6vw,2.8rem)] leading-[1.06]">
-            Three things a small practice does better
+            Differentiators section headline placeholder
           </h2>
         </Reveal>
         <div className="flex flex-col">
@@ -238,8 +229,8 @@ function Principal() {
                 ))}
               </ul>
               <p className="mt-8 text-sm leading-relaxed text-deep-muted">
-                Licensed professional engineer in {firm.licensedIn.join(", ")}. Every deliverable
-                that leaves this firm is stamped by the principal named above.
+                Licensing note placeholder — e.g. licensed professional engineer in{" "}
+                {firm.licensedIn.join(", ")}.
               </p>
             </div>
           </Reveal>
@@ -259,8 +250,7 @@ function Affiliations() {
         <div>
           <Reveal>
             <p className="font-display text-[clamp(1.35rem,2.2vw,1.75rem)] leading-[1.3]">
-              Licensed professional engineering firm in {firm.licensedIn.join(", ")}. Active in
-              state and regional technical committees through:
+              Credentials placeholder — one or two sentences about licenses and memberships.
             </p>
           </Reveal>
           <div className="mt-10 grid gap-x-10 gap-y-4 sm:grid-cols-2">

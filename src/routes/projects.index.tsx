@@ -21,14 +21,12 @@ export const Route = createFileRoute("/projects/")({
       { title: "Projects — Zucker Engineering & Design" },
       {
         name: "description",
-        content:
-          "Case studies from Zucker Engineering & Design: levee and floodwall districts, stream restoration, drainage master plans, intakes and pump stations, and wetland mitigation banks.",
+        content: "Projects page description placeholder — one sentence for search results.",
       },
       { property: "og:title", content: "Projects — Zucker Engineering & Design" },
       {
         property: "og:description",
-        content:
-          "Selected water resources engineering case studies across the Pacific Northwest, with the numbers behind them.",
+        content: "Projects page description placeholder — one sentence about the work shown here.",
       },
     ],
   }),
@@ -59,13 +57,13 @@ function ProjectsPage() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.02]">
-              Past work, with the numbers that made it work
+              Projects page headline placeholder
             </h1>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Six case studies across flood risk, drainage, streams, water supply, and wetlands.
-              Each one says what the problem was, what I did, and what happened after.
+              Projects intro placeholder — one or two sentences introducing the case studies
+              below.
             </p>
           </Reveal>
         </div>
@@ -147,7 +145,7 @@ function ProjectsPage() {
         <div className="mx-auto grid max-w-[88rem] items-center gap-8 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
             <h2 className="max-w-2xl font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.1]">
-              The right reference depends on your basin, not mine
+              References call to action placeholder
             </h2>
           </Reveal>
           <Reveal delay={100}>
