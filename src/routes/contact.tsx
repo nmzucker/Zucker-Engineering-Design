@@ -27,14 +27,12 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact — Zucker Engineering & Design" },
       {
         name: "description",
-        content:
-          "Talk to a water resources engineer about flood risk, drainage, stream restoration, or water supply work. Based in Portland, Oregon.",
+        content: "Contact page description placeholder — one sentence for search results.",
       },
       { property: "og:title", content: "Contact Zucker Engineering & Design" },
       {
         property: "og:description",
-        content:
-          "Send me the reach, the basin, or the drawing set — I will tell you what I think.",
+        content: "Contact page description placeholder — one sentence about getting in touch.",
       },
     ],
   }),
@@ -66,13 +64,12 @@ function ContactPage() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[1.02]">
-              Send me the reach, the basin, or the drawing set
+              Contact page headline placeholder
             </h1>
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Most conversations start with a question about whether something is feasible, or how
-              long a permit will take. Both are fine places to start.
+              Contact intro placeholder — one or two sentences inviting visitors to reach out.
             </p>
           </Reveal>
         </div>
@@ -255,8 +252,7 @@ function ContactPage() {
               <div className="border-t border-border pt-6">
                 <p className="eyebrow text-muted-foreground">Typical response</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  One business day for general inquiries. Same-day for an active construction
-                  issue — call and ask for the engineer of record.
+                  Response time placeholder — e.g. how quickly you usually reply.
                 </p>
               </div>
             </Reveal>

@@ -110,7 +110,8 @@ function ProjectPage() {
             <div className="bg-secondary/60 p-6">
               <p className="eyebrow text-muted-foreground">Talk about a similar project</p>
               <p className="mt-3 text-sm leading-relaxed text-foreground">
-                I am happy to walk a client or a reviewer through the model behind any of these.
+                Sidebar note placeholder — one sentence inviting questions about this kind of
+                work.
               </p>
               <Link
                 to="/contact"
@@ -164,8 +165,7 @@ function ProjectPage() {
         </div>
         <div className="mt-16 border-t border-border pt-10 text-sm text-muted-foreground">
           <p>
-            Project details on this page describe representative engagements. For a reference list
-            matched to your jurisdiction, call {firm.phone} or write{" "}
+            Footer note placeholder — e.g. how to request references. Call {firm.phone} or write{" "}
             <a href={`mailto:${firm.email}`} className="text-primary underline-offset-4 hover:underline">
               {firm.email}
             </a>
